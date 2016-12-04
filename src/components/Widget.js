@@ -42,11 +42,13 @@ class Widget extends Component{
             <div className="clear"></div>
           </div>
           <table>
+          <tbody>
             {showWind &&<tr><td>Wind:</td><td> {getWindSpeedDesc(weather.wind.speed)} {weather.wind.speed} m/s, {getWindDirection(weather.wind.deg)} ({weather.wind.deg})</td></tr>}
             <tr><td>Humidity:</td><td> {weather.main.humidity}%</td></tr>
             <tr><td>Pressure:</td><td> {weather.main.pressure}%</td></tr>
             <tr><td>Sunrise:</td><td> {this.formateDateTime(weather.sys.sunrise)}</td></tr>
             <tr><td>Sunset:</td><td> {this.formateDateTime(weather.sys.sunset)}</td></tr>
+          </tbody>
            </table>
         </div>
       )
